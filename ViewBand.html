@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<title>Code Demo Javascript: Band List</title>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<style>
+			body {
+				background: #EEE;
+				font-family: "Lucida Grande", Calibri, Arial;
+				font-size: 9pt;
+				color: #333;
+			}
+		
+			h1 {
+				text-align: center;
+			}
+			
+			table {
+				width: 800px;
+				background: rgba(255,255,255,0.8);
+				border-radius: 20px;
+				margin: 25px auto;
+				overflow: hidden;
+				box-shadow: 0px 0px 10px #000;
+				border-spacing: 0px;
+				
+				border-collapse: separate;
+			}
+			
+			thead, tfoot {
+				text-align: center;
+				text-transform: capitalize;
+				background: #5F695D;
+				color: #FFF;
+			}
+			
+			thead td {
+				font-size: 1.2em;
+				margin: -12px -12px 10px -12px;
+				border-bottom: 1px rgba(0,0,0,0.1) solid;
+			}
+			
+			.featured {
+				background: #F5EFB1;
+			}
+			
+			.featured img {
+				content: url("data:image/png;base64,R0lGODlhEAAQAOYAAAAAACUAACUTBkkuCI8wAGE5CmI7AGE8FIBGA4BJEK5RAI1SC4xeJbNlDaxmDqxrE8lrANFvCbZzJNx0DLt1HNN2B8l5DdR7FM98Hdl8Frd/ONiABtWCCsmFJreIO9GLPLaMTsmQTOCSMv2THuCUK/uUIvyUFtuVPeqVLtyXQNOYUeqYEtuZIv6ZItibR/+bEdidS/edKP+dDP+eKtWfXv+gHNihXv+iEv+jCf+kA/ynO/+pL+SrTvyrNf+rB/+uC8+vfdmvcf+xFf+zGf+0D/+1If+6MOTBjvfBXf/CSP/GUu/KkP/OWv/Obe/Pof/VgffbnP/fnPfguv/hpP/iqP7ntf/rvP/txv7x1P7y2//52////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAAFwALAAAAAAQABAAAAeGgFyCg4SFhoIwLoeHTkuLhSFYVR2Pg0daVjyPKjY0UldTSBwbFYMJQVhZWVhXVE9KRTcmIxkIXAdAWlhWU09JQjgvLRgFhCBQUU1GPzkyMRKHHkxDPs07GossRDnNJjMniys4Nz06JSMoiyY1JAwMIi0lhxcjFAOCAxQtF4YNC4YLGlR6FAgAOw==");
+			}
+			
+			tr:nth-child(even).featured {
+				background-color: #E9E6C6;
+			}
+			
+			tr:nth-child(even) {
+				background-color: #EBEBEB;
+			}
+			
+			td {
+				padding: 5px;
+				width: 200px;
+			}
+			td + td {
+				width: 450px;
+			}
+			td + td + td {
+				width: 50px;
+				text-align: right;
+			}
+			
+			tfoot td {
+				text-align: center;
+			}
+			
+			.refresh {
+				margin: auto auto;
+				width: 75px;
+				font-family: arial;
+				color: #FFFFFF !important;
+				font-size: 14px;
+				padding: 5px 10px;
+				border-radius: 10px;
+				border: 1px solid #E6E643;
+				background: #BEBF8C;
+			}
+			.refresh:hover {
+				color: #FAFAF5 !important;
+				background: #CBCFB4;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hipster Band List</h1>
+		<table id="bandlist">
+			<thead>
+				<tr />
+			</thead>
+			<tbody>
+				<tr>
+					<td>No Bands Found</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3"><button class="refresh" onmousedown="refreshdata()">Refresh!</div></td>
+				</tr>
+			</tfoot>
+		</table>
+		<script>
+		<!--
+			function refreshdata() {
+				$.getJSON('http://dev.fbdev.me/apps/new_hire_quiz/bands.php?letmein=mvmt', function(data) {
+					
+					// Clear Existing Data
+					$("#bandlist > thead > tr").empty();
+					$("#bandlist > tbody").empty();
+					
+					// Show Bands with correct formating
+					$.each(data.bands, function(index, value) {
+						var isFeatured, tr;
+						// Add New tr
+						$("#bandlist > tbody").append("<tr />");
+						tr = $("#bandlist > tbody > tr:last-child");
+						
+						isFeatured = value.featured;
+						delete value.featured;
+						
+						// Add featured class
+						if (isFeatured) $(tr).addClass("featured");
+						
+						// Walk thu each item in the object and add to table
+						$.each(value, function(index, value) {
+							//console.log(typeof value);
+							if (typeof value == 'object') value = value.join(", ");
+						
+							$(tr).append("<td>"+value+"</td>");
+						});
+						
+						// Add star to first coloum
+						if (isFeatured) $(tr).find("td:first-child").prepend('<img alt="Featured Band" />');
+						
+					});
+					
+					// Add header to table
+					$.each(data.bands[0], function(index, value) {
+						if (index == 'hipster_cred') index = 'cred';
+						$("#bandlist > thead > tr").append("<td>"+index+"</td>");
+					});
+					
+					
+					console.log("Refresh Data From Source!");
+				});
+			}
+			$('#bands').load(refreshdata());
+		-->
+		</script>
+		
+	</body>
+</html>

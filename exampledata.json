@@ -1,0 +1,97 @@
+{
+   "bands":[
+      {
+         "name":"Pixies",
+         "albums":[
+            "Surver Rosa",
+            "Doolittle",
+            "Bossanova",
+            "Trompe le Monde"
+         ],
+         "hipster_cred":6,
+         "featured":false
+      },
+      {
+         "name":"The Postal Service",
+         "albums":[
+            "Give Up"
+         ],
+         "hipster_cred":6,
+         "featured":false
+      },
+      {
+         "name":"You've Never Heard of Us",
+         "albums":[
+
+         ],
+         "hipster_cred":100,
+         "featured":false
+      },
+      {
+         "name":"Radiohead",
+         "albums":[
+            "Pablo Honey",
+            "The Bends",
+            "OK Computer",
+            "Kid A",
+            "Amnesiac",
+            "Hail to the Thief",
+            "In Rainbows",
+            "The Bends"
+         ],
+         "hipster_cred":5,
+         "featured":false
+      },
+      {
+         "name":"Rebecca Black",
+         "albums":[
+            "Friday"
+         ],
+         "hipster_cred":1,
+         "featured":false
+      },
+      {
+         "name":"Bloc Party",
+         "albums":[
+            "Silent Alarm",
+            "A Weekend in the City",
+            "Intimacy",
+            "Four"
+         ],
+         "hipster_cred":7,
+         "featured":false
+      },
+      {
+         "name":"Neutral Milk Hotel",
+         "albums":[
+            "On Avery Island",
+            "In the Aeroplane Over the Sea"
+         ],
+         "hipster_cred":9,
+         "featured":true
+      },
+      {
+         "name":"Kanye West",
+         "albums":[
+            "The College Dropout",
+            "Late Registration",
+            "Graduation",
+            "808s & Heartbreak",
+            "My Beautiful Dark Twisted Fantasy",
+            "Watch the Throne",
+            "Yeezus"
+         ],
+         "hipster_cred":0,
+         "featured":false
+      },
+      {
+         "name":"MGMT",
+         "albums":[
+            "Oracular Spectacular",
+            "Congratulations"
+         ],
+         "hipster_cred":3,
+         "featured":true
+      }
+   ]
+}
